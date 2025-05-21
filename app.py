@@ -12,7 +12,7 @@ st.title("Dynamic Customer Segmentation & Business Insights")
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\mailb\OneDrive\Desktop\Sigma Induction\Customer_Segmentation_Dataset.csv")
+    df = pd.read_csv("Customer_Segmentation_Dataset.csv")
     df['Income'] = pd.to_numeric(df['Income'], errors='coerce')
     df['Dt_Customer'] = pd.to_datetime(df['Dt_Customer'], dayfirst=True, errors='coerce')
     return df
